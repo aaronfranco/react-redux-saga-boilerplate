@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Music should handle GET_JANE_FAILURE 1`] = `
+Object {
+  "message": "Something went wrong",
+  "music": Array [],
+  "name": "",
+  "state": "error",
+  "username": "",
+}
+`;
+
+exports[`Music should handle GET_JANE_REQUEST 1`] = `
+Object {
+  "message": "",
+  "music": undefined,
+  "name": undefined,
+  "state": "running",
+  "username": undefined,
+}
+`;
+
+exports[`Music should handle GET_JANE_SUCCESS 1`] = `
+Object {
+  "message": "",
+  "music": undefined,
+  "name": undefined,
+  "state": "loaded",
+  "username": undefined,
+}
+`;
+
+exports[`Music should return the initial state 1`] = `
+Object {
+  "message": "",
+  "music": Array [],
+  "name": "",
+  "state": "idle",
+  "username": "",
+}
+`;

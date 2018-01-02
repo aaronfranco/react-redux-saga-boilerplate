@@ -20,5 +20,5 @@ module.exports = {
   publicPath: resolvePath('/'),
   root: resolvePath(''),
   store: resolvePath('app/scripts/store/index'),
-  test: resolvePath('test'),
+  test: resolvePath('test')
 };

@@ -64,7 +64,6 @@ export class App extends React.Component {
               <Route component={NotFound} />
             </Switch>
           </main>
-          <Footer />
           <SystemAlerts alerts={app.alerts} dispatch={dispatch} />
         </div>
       </ConnectedRouter>

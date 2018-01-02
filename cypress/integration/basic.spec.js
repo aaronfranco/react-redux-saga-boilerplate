@@ -1,8 +1,8 @@
-describe('React-Redux-Saga-Boilerplate', () => {
+describe('Noirdoor Coding challenge', () => {
   it('should assert that <title> is correct', () => {
     cy.visit('http://localhost:3000');
     cy.title()
-      .should('include', 'react-redux-saga-boilerplate');
+      .should('include', 'Noirdoor Coding Challenge');
   });
 
   it('should be able to start', () => {
@@ -15,28 +15,11 @@ describe('React-Redux-Saga-Boilerplate', () => {
     cy.get('.app__private')
       .should('have.length', 1);
 
-    cy.get('.app__github')
+    cy.get('.app__music')
       .should('have.length', 1);
-    cy.get('.app__github__grid')
-      .should('have.length', 1)
-      .should('have.class', 'app__github__grid--react');
-
-    cy.get('.app__github__grid li')
-      .should('have.length', 30);
   });
 
-  it('should be able to toggle the selector', () => {
-    cy.get('.app__github__selector .btn:last-child')
-      .not('[disabled]')
-      .should('have.text', 'Redux')
-      .click();
-  });
 
-  it('should render the redux repos ', () => {
-    cy.get('.app__github__grid')
-      .should('have.length', 1)
-      .should('have.class', 'app__github__grid--redux');
-  });
 
   it('should be able to logout', () => {
     cy.get('.app__logout')

@@ -18,6 +18,8 @@
   <% for (var css in htmlWebpackPlugin.files.css) { %>
   <link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
   <% } %>
+  
+
   <meta name="apple-mobile-web-app-title" content="React-Redux-Saga">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="#333333">
@@ -72,7 +74,7 @@
 <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
 <script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
 <% } %>
-
+<script src="//cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.4.0/wavesurfer.min.js"></script>
 <% if (htmlWebpackPlugin.options.googleAnalytics) { %>
 <script>
   (function(i, s, o, g, r, a, m) {

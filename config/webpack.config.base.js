@@ -50,6 +50,7 @@ module.exports = {
       assets: paths.assets,
       modernizr$: paths.modernizrrc,
       test: paths.test,
+      wavesurfer: require.resolve('wavesurfer.js')
     },
     modules: [paths.appScripts, paths.nodeModules],
     extensions: ['.js', '.jsx', '.json'],
@@ -77,6 +78,9 @@ module.exports = {
       APP__GITHASH: JSON.stringify(gitInfoPlugin.hash()),
       APP__VERSION: JSON.stringify(NPMPackage.version),
     }),
+    new webpack.ProvidePlugin({
+      WaveSurfer: 'wavesurfer.js'
+    })
   ],
   module: {
     rules: [

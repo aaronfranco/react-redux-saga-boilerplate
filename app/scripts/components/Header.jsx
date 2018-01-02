@@ -20,7 +20,7 @@ export default class Header extends React.PureComponent {
     return (
       <header className="app__header">
         <div className="app__container">
-          <Logo />
+          <Logo file="noir"/>
           <div className="app__header__menu">
             <ul className="list-unstyled">
               <li>

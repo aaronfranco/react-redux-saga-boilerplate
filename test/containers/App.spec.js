@@ -33,7 +33,8 @@ describe('App', () => {
     expect(wrapper.find('HelmetWrapper')).toBePresent();
     expect(wrapper.find('ConnectedRouter')).toBePresent();
     expect(wrapper.find('Switch')).toBePresent();
-    expect(wrapper.find('Footer')).toBePresent();
+    // AGF: Removed lame footer
+    // expect(wrapper.find('Footer')).toBePresent();
     expect(wrapper.find('SystemAlerts')).toBePresent();
   });
 

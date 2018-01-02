@@ -1,5 +1,5 @@
 .app__header {
-  background-color: rgba($app-color, 0.9);
+  background-color: transparent;
   height: $header-height;
   left: 0;
   position: fixed;
@@ -8,7 +8,6 @@
   z-index: 200;
 
   &:before {
-    background-color: $app-color;
     bottom: 0;
     content: '';
     height: 0.2rem;

@@ -22,13 +22,13 @@ export class Home extends React.PureComponent {
 
   render() {
     const { user } = this.props;
-
+    console.log(config)
     return (
       <div key="Home" className="app__home app__route">
         <div className="app__container">
           <div className="app__home__wrapper">
             <div className="app__home__header">
-              <Logo />
+              <Logo file="noir"/>
             </div>
             <h1>{config.description}</h1>
             <a

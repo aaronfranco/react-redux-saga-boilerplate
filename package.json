@@ -1,7 +1,7 @@
 {
   "name": "react-redux-saga-boilerplate",
-  "title": "react-redux-saga-boilerplate",
-  "description": "React-Redux-Saga Boilerplate",
+  "title": "Noirdoor Coding Challenge",
+  "description": "Noirdoor Coding Challenge",
   "version": "2018.1.0",
   "author": "Gil Barbara <gilbarbara@gmail.com>",
   "repository": {
@@ -29,10 +29,12 @@
     "react-dom": "^16.2.0",
     "react-helmet": "^5.2.0",
     "react-inlinesvg": "^0.7.4",
+    "react-particles-js": "^2.1.0",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^5.0.0-alpha.8",
     "react-transition-group": "^2.2.1",
+    "react-wavesurfer": "^0.8.6",
     "redux": "^3.7.2",
     "redux-persist": "^5.4.0",
     "redux-saga": "^0.16.0",
@@ -40,7 +42,8 @@
     "sass-mediaqueries": "^1.6.1",
     "scroll": "^2.0.1",
     "scroll-doc": "^0.2.1",
-    "uuid": "^3.1.0"
+    "uuid": "^3.1.0",
+    "wavesurfer.js": "^2.0.0-beta01"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.3",
@@ -128,6 +131,7 @@
     "lint": "eslint  --ext .js --ext .jsx app/scripts config test",
     "lint:styles": "stylelint app/styles/**/*.scss",
     "test": "jest --config config/jest.config.js --coverage",
+    "testupdate": "jest --config config/jest.config.js --updateSnapshot",
     "test:watch": "jest --config config/jest.config.js --watch",
     "test:automation": "npm run start automation",
     "bundlesize": "bundlesize",

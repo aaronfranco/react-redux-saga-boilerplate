@@ -6,9 +6,7 @@ import config from 'config';
 
 const Logo = ({ file }) => (
   <div className="app__logo">
-    <SVG src={require(`assets/media/brand/${file}.svg`)}>
-      <img src={require(`assets/media/brand/${file}.png`)} alt={config.title} />
-    </SVG>
+    <img src={require(`assets/media/brand/${file}.png`)} alt={config.title} />
   </div>
 );
 
