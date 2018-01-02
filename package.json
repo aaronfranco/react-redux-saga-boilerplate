@@ -137,7 +137,7 @@
     "bundlesize": "bundlesize",
     "deploy": "node tools deploy",
     "publish": "node tools publish",
-    "precommit": "node tools upstream && npm run lint && npm run lint:styles && npm test",
+    "precommit": "node tools upstream && npm test",
     "postmerge": "node tools dependencies && npm update"
   },
   "browserslist": [

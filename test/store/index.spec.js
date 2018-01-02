@@ -15,12 +15,12 @@ describe('store', () => {
           state: 'idle',
         },
       },
-      music:{
-           message:'',
-           username:'',
-           name:'',
-           music:[],
-           state:'idle'
+      music: {
+           message: '',
+           username: '',
+           name: '',
+           music: [],
+           state: 'idle'
       },
       router: { location: null },
       user: {

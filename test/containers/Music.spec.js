@@ -16,7 +16,7 @@ const props = {
 
 function setup(ownProps = props) {
   return shallow(
-    <Music {...ownProps} />,
+    <Music { ...ownProps } />,
     { attachTo: document.getElementById('react') }
   );
 }
@@ -25,11 +25,11 @@ describe('Music', () => {
   const wrapper = setup();
 
   it('should be a Component', () => {
-    expect(wrapper.instance() instanceof React.Component).toBe(true);
+    expect( wrapper.instance() instanceof React.Component ).toBe(true);
   });
 
   it('should render properly', () => {
-    expect(wrapper.find('.app__music')).toBePresent();
+    expect( wrapper.find('.app__music') ).toBePresent();
   });
 
   // it('should render a Loader without data', () => {
@@ -50,16 +50,16 @@ describe('Music', () => {
            name: "Jane Doe",
            music: [
                 {
-                     "title":"Track One",
-                     "file":'414365__erokia__ambient-wave-28.wav'
+                     "title": "Track One",
+                     "file": '414365__erokia__ambient-wave-28.wav'
                 },
                 {
-                     "title":"Track Two",
-                     "file":"414497__toiletrolltube__hellocatfood-b6b7-o.wav"
+                     "title": "Track Two",
+                     "file": "414497__toiletrolltube__hellocatfood-b6b7-o.wav"
                 },
                 {
-                     'title':"Track Three",
-                     "file":'414514__eardeer__daybreak.wav'
+                     'title': "Track Three",
+                     "file": '414514__eardeer__daybreak.wav'
                 }
            ]
       },

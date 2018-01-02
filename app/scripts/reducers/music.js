@@ -5,11 +5,11 @@ import { parseError } from 'modules/connect';
 import { ActionTypes } from 'constants/index';
 
 export const musicState = {
-  username:"",
-     name:"",
-     music:[],
-  state:"idle",
-  message:''
+  username: "",
+  name: "",
+  music: [],
+  state: "idle",
+  message: ''
 };
 
 export default {
@@ -17,20 +17,20 @@ export default {
     [ActionTypes.GET_JANE_REQUEST](state, { payload }) {
 
       return immutable(state, {
-           username:{$set: payload.username},
-           name:{$set: payload.name},
-           music:{$set: payload.music},
-           message:{$set: ''},
+           username: { $set: payload.username },
+           name: { $set: payload.name },
+           music: { $set: payload.music },
+           message: { $set: ''},
            state: { $set: 'running' },
       });
     },
     [ActionTypes.GET_JANE_SUCCESS](state, { payload }) {
          console.log(payload)
-      return immutable(state,{
-           username:{$set: payload.username},
-           name:{$set: payload.name },
-           music:{$set: payload.music },
-           message:{$set: ""},
+      return immutable(state, {
+           username: { $set: payload.username },
+           name: { $set: payload.name },
+           music: { $set: payload.music },
+           message: { $set: "" },
            state: { $set: 'loaded' },
       });
     },

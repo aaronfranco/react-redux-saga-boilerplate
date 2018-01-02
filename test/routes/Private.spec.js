@@ -21,7 +21,6 @@ describe('Private', () => {
 
   it('should render properly', () => {
     expect(wrapper.find('.app__private')).toBePresent();
-    expect(wrapper.find('h1')).toHaveText('Oh hai!');
     expect(wrapper.find('Connect(Music)')).toBePresent();
   });
 });
