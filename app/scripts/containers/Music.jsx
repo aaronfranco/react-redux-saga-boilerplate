@@ -7,6 +7,10 @@ import { getJane, showAlert } from 'actions';
 import Loader from 'components/Loader';
 
 export class Music extends React.Component {
+  static propTypes = {
+    dispatch: PropTypes.func.isRequired,
+    jane: PropTypes.object.isRequired,
+  };
   constructor(props){
        super(props);
        this.wavesurfer;
@@ -18,10 +22,6 @@ export class Music extends React.Component {
            trackLoading: true,
            selectedTracks:{0:"selected"}
      };
-      this.propTypes = {
-        dispatch: PropTypes.func.isRequired,
-        jane: PropTypes.object.isRequired,
-      };
  }
 
   componentWillReceiveProps(nextProps){
@@ -54,7 +54,6 @@ export class Music extends React.Component {
        e.preventDefault();
        let selected = this.state.selectedTracks;
        Object.entries(selected).forEach(([key, value]) => {
-           console.log(`${key} ${value}`); // "a 5", "b 7", "c 9"
            if(key === index){
                 selected[key] = "selected";
            }else{
@@ -161,8 +160,8 @@ forwardBackRelease =(e)=>{
                            <div className="audioControls" style={thisStyle}>
                                 <a href="#" className="btn leftbtn playbtn" onClick={this.clickPlay}><i className={(this.state.playing ? "fa fa-pause":"fa fa-play" )}></i></a>
                                 <a href="#" className="btn midbtn stopbtn" onClick={this.clickStop}><i className="fa fa-stop"></i></a>
-                                <a href="#" className="btn midbtn rewindbtn"  onMouseDown={this.pressRewind} onMouseUp={this.forwardBackRelease}><i className="fa fa-backward"></i></a>
-                                <a href="#" id="forwardBtn" className="btn rightbtn forwardbtn"  onMouseDown={this.pressForward} onMouseUp={this.forwardBackRelease}><i className="fa fa-forward"></i></a>
+                                <a href="#" className="btn midbtn rewindbtn"  onMouseDown={this.pressRewind} onMouseUp={this.forwardBackRelease} onMouseOut={this.forwardBackRelease}><i className="fa fa-backward"></i></a>
+                                <a href="#" id="forwardBtn" className="btn rightbtn forwardbtn"  onMouseDown={this.pressForward} onMouseOut={this.forwardBackRelease} onMouseUp={this.forwardBackRelease}><i className="fa fa-forward"></i></a>
                            </div>
                       </div>
                       <ul className="list-group list-group-flush">

@@ -44,7 +44,7 @@ export class App extends React.Component {
     return (
       <ConnectedRouter history={history}>
         <div
-          className={cx('app', {
+          className={cx('app w-100 h-100', {
             'app--private': user.isAuthenticated,
           })}
         >
@@ -57,7 +57,7 @@ export class App extends React.Component {
             titleAttributes={{ itemprop: 'name', lang: 'pt-br' }}
           />
           {user.isAuthenticated && <Header dispatch={dispatch} user={user} />}
-          <main className="container">
+          <main className="h-100 w-100">
             <Switch>
               <RoutePublic isAuthenticated={user.isAuthenticated} path="/" exact component={Home} />
               <RoutePrivate isAuthenticated={user.isAuthenticated} path="/private" component={Private} />

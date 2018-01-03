@@ -24,13 +24,12 @@ export class Home extends React.PureComponent {
     const { user } = this.props;
     console.log(config)
     return (
-      <div key="Home" className="app__home app__route">
-        <div className="app__container">
-          <div className="app__home__wrapper">
+      <div key="Home" className="h-100 w-100">
+        <div className="row justify-content-center align-items-center vertical-align-content">
             <div className="app__home__header">
               <Logo file="noir"/>
             </div>
-            <h1>{config.description}</h1>
+            <h1 className="mb-5">{config.description}</h1>
             <a
               href="#login"
               onClick={this.handleClickLogin}
@@ -42,7 +41,6 @@ export class Home extends React.PureComponent {
               <span>Start</span>
             </a>
           </div>
-        </div>
       </div>
     );
   }
