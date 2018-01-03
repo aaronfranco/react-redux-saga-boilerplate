@@ -7,18 +7,23 @@ import { getJane, showAlert } from 'actions';
 import Loader from 'components/Loader';
 
 export class Music extends React.Component {
-  state = {
-       currentTrack: null,
-       pos: 0,
-       playing: true,
-       firstTrack: true,
-       trackLoading: true,
-       selectedTracks:{0:"selected"}
- };
-  static propTypes = {
-    dispatch: PropTypes.func.isRequired,
-    jane: PropTypes.object.isRequired,
-  };
+  constructor(props){
+       super(props);
+       this.wavesurfer;
+       this.state = {
+           currentTrack: null,
+           pos: 0,
+           playing: true,
+           firstTrack: true,
+           trackLoading: true,
+           selectedTracks:{0:"selected"}
+     };
+      this.propTypes = {
+        dispatch: PropTypes.func.isRequired,
+        jane: PropTypes.object.isRequired,
+      };
+ }
+
   componentWillReceiveProps(nextProps){
        const { dispatch, jane } = this.props;
        if(nextProps.jane.music){
@@ -72,7 +77,7 @@ export class Music extends React.Component {
             var list = items.map(( item, index ) => {
                  return(
                       <li key={item.file+"_"+index} className={"list-group-item "+(this.state.selectedTracks[index] ? this.state.selectedTracks[index] : "")}>
-                           <a href="#" onClick={(e) => {this.handleTrackClick(index, e)}} data-track={item.file}>{item.title}</a>
+                           <a id={"audio_track_"+index} href="#" onClick={(e) => {this.handleTrackClick(index, e)}} data-track={item.file}>{item.title}</a>
                       </li>
                  );
             });
@@ -154,10 +159,10 @@ forwardBackRelease =(e)=>{
                            }
                            <div id="waveform" style={thisWave}></div>
                            <div className="audioControls" style={thisStyle}>
-                                <a href="#" className="btn  leftbtn" onClick={this.clickPlay}><i className={(this.state.playing ? "fa fa-pause":"fa fa-play" )}></i></a>
-                                <a href="#" className="btn midbtn" onClick={this.clickStop}><i className="fa fa-stop"></i></a>
-                                <a href="#" className="btn midbtn"  onMouseDown={this.pressRewind} onMouseUp={this.forwardBackRelease}><i className="fa fa-backward"></i></a>
-                                <a href="#" className="btn rightbtn"  onMouseDown={this.pressForward} onMouseUp={this.forwardBackRelease}><i className="fa fa-forward"></i></a>
+                                <a href="#" className="btn leftbtn playbtn" onClick={this.clickPlay}><i className={(this.state.playing ? "fa fa-pause":"fa fa-play" )}></i></a>
+                                <a href="#" className="btn midbtn stopbtn" onClick={this.clickStop}><i className="fa fa-stop"></i></a>
+                                <a href="#" className="btn midbtn rewindbtn"  onMouseDown={this.pressRewind} onMouseUp={this.forwardBackRelease}><i className="fa fa-backward"></i></a>
+                                <a href="#" id="forwardBtn" className="btn rightbtn forwardbtn"  onMouseDown={this.pressForward} onMouseUp={this.forwardBackRelease}><i className="fa fa-forward"></i></a>
                            </div>
                       </div>
                       <ul className="list-group list-group-flush">
@@ -190,8 +195,12 @@ forwardBackRelease =(e)=>{
 
 /* istanbul ignore next */
 function mapStateToProps(state) {
+  console.log(state)
      // is this correct?
-  return { jane: state.music };
+  return {
+    jane: state.music ,
+    playing: state.playing
+  };
 }
 
 export default connect(mapStateToProps)(Music);

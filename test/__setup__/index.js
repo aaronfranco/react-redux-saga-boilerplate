@@ -48,3 +48,6 @@ global.navigate = (options) => {
 
   jsdom.reconfigure({ url });
 };
+
+import WaveSurfer from 'wavesurfer.js';
+global.wavesurfer = WaveSurfer;

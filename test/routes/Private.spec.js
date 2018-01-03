@@ -20,7 +20,6 @@ describe('Private', () => {
   });
 
   it('should render properly', () => {
-    expect(wrapper.find('.app__private')).toBePresent();
     expect(wrapper.find('Connect(Music)')).toBePresent();
   });
 });

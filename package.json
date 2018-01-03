@@ -131,7 +131,7 @@
     "lint": "eslint  --ext .js --ext .jsx app/scripts config test",
     "lint:styles": "stylelint app/styles/**/*.scss",
     "test": "jest --config config/jest.config.js --coverage",
-    "testupdate": "jest --config config/jest.config.js --updateSnapshot",
+    "testupdate": "jest --config config/jest.config.js --updateSnapshot --verbose",
     "test:watch": "jest --config config/jest.config.js --watch",
     "test:automation": "npm run start automation",
     "bundlesize": "bundlesize",

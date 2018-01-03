@@ -22,7 +22,7 @@ export default class Header extends React.PureComponent {
            <div className="row pt-4">
              <div className="col-6"><Logo file="noir"/></div>
              <div className="col-6">
-                  <a className="btn btn-primary float-right" href="#logout" onClick={this.handleClickLogout}>
+                  <a id="app_logout" className="btn btn-primary float-right" href="#logout" onClick={this.handleClickLogout}>
                       <span>logout </span><i className="i-sign-out" />
                  </a>
              </div>
