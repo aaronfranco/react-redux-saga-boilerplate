@@ -5,9 +5,7 @@ import SVG from 'react-inlinesvg';
 import config from 'config';
 
 const Logo = ({ file }) => (
-  <div className="app__logo">
-    <img src={require(`assets/media/brand/${file}.png`)} alt={config.title} />
-  </div>
+    <img height="55" src={require(`assets/media/brand/${file}.png`)} alt={config.title} />
 );
 
 Logo.propTypes = {

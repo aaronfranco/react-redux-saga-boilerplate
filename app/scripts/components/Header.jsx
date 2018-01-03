@@ -18,19 +18,15 @@ export default class Header extends React.PureComponent {
 
   render() {
     return (
-      <header className="app__header">
-        <div className="app__container">
-          <Logo file="noir"/>
-          <div className="app__header__menu">
-            <ul className="list-unstyled">
-              <li>
-                <a href="#logout" className="app__logout" onClick={this.handleClickLogout}>
-                  <span>logout</span><i className="i-sign-out" />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+      <header className="container">
+           <div className="row pt-4">
+             <div className="col-6"><Logo file="noir"/></div>
+             <div className="col-6">
+                  <a className="btn btn-primary float-right" href="#logout" onClick={this.handleClickLogout}>
+                      <span>logout </span><i className="i-sign-out" />
+                 </a>
+             </div>
+            </div>
       </header>
     );
   }

@@ -18,8 +18,9 @@ body{
 
   &__container {
     @include app-container();
-
+    min-width:550px;
     margin: 0 auto;
+
   }
 
   &__route {
@@ -33,4 +34,15 @@ body{
       margin-right: $grid-gutter-width / 6;
     }
   }
+}
+@media only screen and (max-width: 680px) {
+     .app {
+
+       &__container {
+         padding:5px;
+         margin: 0 auto;
+         width:100%;
+       }
+
+     }
 }

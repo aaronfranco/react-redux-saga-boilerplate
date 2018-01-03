@@ -4,7 +4,7 @@
   min-height: 100vh;
   overflow: hidden;
   position: relative;
-
+  width:100%;
   &:before {
     background: linear-gradient(to bottom, #000, #fff);
     bottom: 0;
@@ -20,6 +20,7 @@
   .app__container {
     position: relative;
     z-index: 10;
+    width:100%;
   }
 
   &__wrapper {

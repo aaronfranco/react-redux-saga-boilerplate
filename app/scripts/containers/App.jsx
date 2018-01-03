@@ -57,7 +57,7 @@ export class App extends React.Component {
             titleAttributes={{ itemprop: 'name', lang: 'pt-br' }}
           />
           {user.isAuthenticated && <Header dispatch={dispatch} user={user} />}
-          <main className="app__main">
+          <main className="container">
             <Switch>
               <RoutePublic isAuthenticated={user.isAuthenticated} path="/" exact component={Home} />
               <RoutePrivate isAuthenticated={user.isAuthenticated} path="/private" component={Private} />
