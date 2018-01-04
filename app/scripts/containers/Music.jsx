@@ -41,7 +41,11 @@ export class Music extends React.Component {
          this.wavesurfer = WaveSurfer.create({
            container: document.getElementById('waveform'),
            waveColor: 'violet',
-           progressColor: 'purple'
+           progressColor: 'purple',
+           barWidth:2,
+           cursorWidth:2,
+           cursorColor:'#1da6bf',
+           progressColor:'#afd6dd'
           });
     }
     dispatch(getJane());

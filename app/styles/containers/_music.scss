@@ -33,6 +33,14 @@
                  display:block;
                  width:100%;
                  margin-top:10px;
+                 a{
+                   background-color: #afd6dd;
+                   box-shadow:none;
+                  color: white;
+                 }
+                 a:hover{
+                   background-color: #1da6bf;
+                 }
                  .leftbtn {
                       border:1px solid;
                       border-radius:10px 0px 0px 10px;
