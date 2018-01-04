@@ -181,7 +181,7 @@ forwardBackRelease =(e)=>{
     }
 
     return (
-      <div key="Music" className="row music_app">
+      <div key="Music" className="row music_app w-100">
            <div className="col-md-3"></div>
            <div className="col-md-6">
                 {output}
